@@ -27,7 +27,7 @@ jobs:
           npm install
           npm run build
           mv ./build/static ./build/standalone/build
-          mv ./public ./build/standalone
+          mv ./app ./build/standalone
 
       - name: "Deploy to Azure Web App"
         id: deploy-to-webapp
