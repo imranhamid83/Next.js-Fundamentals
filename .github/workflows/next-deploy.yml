@@ -3,9 +3,15 @@
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.FRIENDSOFTHECOMMUNITY_PUBLISH_PROFILE }}          
+          azure_static_web_apps_api_token: ${{ secrets.FRIENDSOFTHECOMMUNITY_PUBLISH_PROFILE }}         
           action: "upload"
           app_location: "/" 
           api_location: ""
           output_location: "" 
+        env:
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_DATABASE: ${{ secrets.DB_DATABASE }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_PORT: ${{ secrets.DB_PORT }}
 ...
