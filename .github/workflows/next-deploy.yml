@@ -26,7 +26,7 @@ jobs:
           mv ./build/static ./build/standalone/build
           mv ./images ./build/standalone/images
           mv ./styles ./build/standalone/styles
-          mv ./next ./build/standalone/next
+          mv ./.next ./build/standalone/_next
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
